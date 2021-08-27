@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "dicom-viewer-dac76",
+    "default": "dicom-viewer-dac76"
+  }
+}

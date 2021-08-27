@@ -1,0 +1,818 @@
+[debug] [2021-08-25T20:03:22.134Z] ----------------------------------------------------------------------
+[debug] [2021-08-25T20:03:22.135Z] Command:       /Users/leo/.nvm/versions/node/v14.17.0/bin/node /Users/leo/.nvm/versions/node/v14.17.0/bin/firebase functions:shell
+[debug] [2021-08-25T20:03:22.135Z] CLI Version:   9.16.5
+[debug] [2021-08-25T20:03:22.135Z] Platform:      darwin
+[debug] [2021-08-25T20:03:22.135Z] Node Version:  v14.17.0
+[debug] [2021-08-25T20:03:22.136Z] Time:          Thu Aug 26 2021 04:03:22 GMT+0800 (Taipei Standard Time)
+[debug] [2021-08-25T20:03:22.136Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-25T20:03:22.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-25T20:03:22.160Z] > authorizing via signed-in user (grong.su@gmail.com)
+[debug] [2021-08-25T20:03:22.160Z] [iam] checking project dicom-viewer-dac76 for permissions ["firebase.projects.get"]
+[debug] [2021-08-25T20:03:22.160Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-08-25T20:03:22.160Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-25T20:03:22.262Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 25 Aug 2021 20:03:22 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-25T20:03:22.307Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dicom-viewer-dac76:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-08-25T20:03:23.179Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 25 Aug 2021 20:03:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=761","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-25T20:03:23.208Z] [functions] Using node@14 from host.
+[debug] [2021-08-25T20:03:23.209Z] defaultcredentials: writing to file /Users/leo/.config/firebase/grong_su_gmail.com_application_default_credentials.json
+[debug] [2021-08-25T20:03:23.210Z] DEBUG: Setting GAC to /Users/leo/.config/firebase/grong_su_gmail.com_application_default_credentials.json
+[debug] [2021-08-25T20:03:23.211Z] > refreshing access token with scopes: []
+[debug] [2021-08-25T20:03:23.211Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-08-25T20:03:23.303Z] <<< HTTP RESPONSE 200 {"date":"Wed, 25 Aug 2021 20:03:23 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-08-25T20:03:23.350Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dicom-viewer-dac76/adminSdkConfig [none]
+[debug] [2021-08-25T20:03:24.210Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dicom-viewer-dac76/adminSdkConfig 200
+[debug] [2021-08-25T20:03:24.210Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dicom-viewer-dac76/adminSdkConfig {"projectId":"dicom-viewer-dac76","storageBucket":"dicom-viewer-dac76.appspot.com","locationId":"asia-east2"}
+[debug] [2021-08-25T20:03:24.240Z] [functions] Watching "/Users/leo/webproject/dicom-viewer-cloud-functions/functions" for Cloud Functions...
+[debug] [2021-08-25T20:03:24.252Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-08-25T20:03:24.252Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2021-08-25T20:03:24.252Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-08-25T20:03:24.252Z] DEBUG: [worker-~diagnostic~-b4df2133-354b-400f-87f1-0fd0db20f555]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51452.sock
+[debug] [2021-08-25T20:03:24.253Z] DEBUG: [worker-~diagnostic~-b4df2133-354b-400f-87f1-0fd0db20f555]: BUSY
+[debug] [2021-08-25T20:03:24.382Z] DEBUG: [runtime-status] [51452] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:03:24.383Z] DEBUG: [runtime-status] [51452] Disabled runtime features: undefined
+[debug] [2021-08-25T20:03:24.383Z] DEBUG: [runtime-status] [51452] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:03:24.385Z] DEBUG: [runtime-status] [51452] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:24.386Z] DEBUG: [runtime-status] [51452] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:24.387Z] DEBUG: [runtime-status] [51452] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:03:24.387Z] DEBUG: [runtime-status] [51452] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:24.401Z] DEBUG: [runtime-status] [51452] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:03:24.401Z] DEBUG: [runtime-status] [51452] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:03:24.401Z] DEBUG: [runtime-status] [51452] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:24.401Z] DEBUG: [runtime-status] [51452] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:03:24.402Z] DEBUG: [runtime-status] [51452] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:24.402Z] DEBUG: [runtime-status] [51452] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:03:24.492Z] DEBUG: [worker-~diagnostic~-b4df2133-354b-400f-87f1-0fd0db20f555]: IDLE
+[debug] [2021-08-25T20:03:24.493Z] [functions[asia-east2-organization]] http function initialized (http://localhost:5000/dicom-viewer-dac76/asia-east2/organization).
+[debug] [2021-08-25T20:03:24.493Z] [functions[asia-east2-docs]] http function initialized (http://localhost:5000/dicom-viewer-dac76/asia-east2/docs).
+[info] i  functions: Loaded functions: organization, docs 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage 
+[debug] [2021-08-25T20:03:26.584Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.584Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:26.585Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs --> asia-east2-docs
+[debug] [2021-08-25T20:03:26.592Z] DEBUG: [worker-pool] addWorker(asia-east2-docs)
+[debug] [2021-08-25T20:03:26.593Z] DEBUG: [worker-pool] Adding worker with key asia-east2-docs, total=1
+[debug] [2021-08-25T20:03:26.593Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:03:26.593Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51455.sock
+[debug] [2021-08-25T20:03:26.593Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: BUSY
+[debug] [2021-08-25T20:03:26.732Z] DEBUG: [runtime-status] [51455] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:03:26.733Z] DEBUG: [runtime-status] [51455] Disabled runtime features: undefined
+[debug] [2021-08-25T20:03:26.733Z] DEBUG: [runtime-status] [51455] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:03:26.735Z] DEBUG: [runtime-status] [51455] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:26.736Z] DEBUG: [runtime-status] [51455] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:26.737Z] DEBUG: [runtime-status] [51455] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:03:26.737Z] DEBUG: [runtime-status] [51455] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:26.751Z] DEBUG: [runtime-status] [51455] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:03:26.751Z] DEBUG: [runtime-status] [51455] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:03:26.752Z] DEBUG: [runtime-status] [51455] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:26.752Z] DEBUG: [runtime-status] [51455] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:03:26.752Z] DEBUG: [runtime-status] [51455] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:03:26.752Z] DEBUG: [runtime-status] [51455] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:03:26.842Z] DEBUG: [runtime-status] [51455] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:03:26.842Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:03:26.842Z] DEBUG: [runtime-status] [51455] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:03:26.842Z] DEBUG: [runtime-status] [51455] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:03:26.843Z] DEBUG: [runtime-status] [51455] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51455.sock
+[debug] [2021-08-25T20:03:26.844Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:03:26.844Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs, mapping to path=/
+[debug] [2021-08-25T20:03:26.846Z] DEBUG: [runtime-status] [51455] Ephemeral server handling GET request
+[debug] [2021-08-25T20:03:26.848Z] DEBUG: [runtime-status] [51455] Ephemeral server survived.
+[info] >  - 2021-08-25T20:03:26.850Z [GET]/ 200 3104 1.718 ms {"user":"- 2021-08-25T20:03:26.850Z [GET]/ 200 3104 1.718 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:03:26.850Z [GET]/ 200 3104 1.718 ms"}}
+[debug] [2021-08-25T20:03:26.850Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:03:26.851Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: IDLE
+[debug] [2021-08-25T20:03:26.851Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.867Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.867Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:26.868Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.869Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.869Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:26.870Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.870Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.870Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:26.871Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.871Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:26.871Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:26.872Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.571Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.571Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:27.571Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs --> asia-east2-docs
+[debug] [2021-08-25T20:03:27.571Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:03:27.571Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51455.sock
+[debug] [2021-08-25T20:03:27.572Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: BUSY
+[debug] [2021-08-25T20:03:27.572Z] DEBUG: [runtime-status] [51455] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:03:27.572Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:03:27.573Z] DEBUG: [runtime-status] [51455] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:03:27.573Z] DEBUG: [runtime-status] [51455] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:03:27.573Z] DEBUG: [runtime-status] [51455] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51455.sock
+[debug] [2021-08-25T20:03:27.574Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:03:27.574Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs, mapping to path=/
+[debug] [2021-08-25T20:03:27.576Z] DEBUG: [runtime-status] [51455] Ephemeral server handling GET request
+[debug] [2021-08-25T20:03:27.576Z] DEBUG: [runtime-status] [51455] Ephemeral server survived.
+[info] >  - 2021-08-25T20:03:27.577Z [GET]/ 200 3104 0.639 ms {"user":"- 2021-08-25T20:03:27.577Z [GET]/ 200 3104 0.639 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:03:27.577Z [GET]/ 200 3104 0.639 ms"}}
+[debug] [2021-08-25T20:03:27.578Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:03:27.578Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: IDLE
+[debug] [2021-08-25T20:03:27.578Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.593Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.593Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:27.594Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.595Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.595Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:27.596Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.597Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.597Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:27.598Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.599Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:27.599Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:27.600Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.572Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.572Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:28.572Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs --> asia-east2-docs
+[debug] [2021-08-25T20:03:28.573Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:03:28.573Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51455.sock
+[debug] [2021-08-25T20:03:28.573Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: BUSY
+[debug] [2021-08-25T20:03:28.574Z] DEBUG: [runtime-status] [51455] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:03:28.574Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:03:28.574Z] DEBUG: [runtime-status] [51455] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:03:28.574Z] DEBUG: [runtime-status] [51455] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:03:28.575Z] DEBUG: [runtime-status] [51455] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51455.sock
+[debug] [2021-08-25T20:03:28.575Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:03:28.575Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs, mapping to path=/
+[debug] [2021-08-25T20:03:28.576Z] DEBUG: [runtime-status] [51455] Ephemeral server handling GET request
+[debug] [2021-08-25T20:03:28.577Z] DEBUG: [runtime-status] [51455] Ephemeral server survived.
+[info] >  - 2021-08-25T20:03:28.578Z [GET]/ 200 3104 0.506 ms {"user":"- 2021-08-25T20:03:28.578Z [GET]/ 200 3104 0.506 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:03:28.578Z [GET]/ 200 3104 0.506 ms"}}
+[debug] [2021-08-25T20:03:28.578Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:03:28.579Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: IDLE
+[debug] [2021-08-25T20:03:28.579Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.595Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.596Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:28.596Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.597Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.597Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:28.598Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.599Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.599Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:28.600Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.601Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:03:28.601Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:03:28.602Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:38.221Z] DEBUG: File /Users/leo/webproject/dicom-viewer-cloud-functions/functions/src/routes/docs.ts changed, reloading triggers
+[debug] [2021-08-25T20:04:39.228Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2021-08-25T20:04:39.229Z] DEBUG: [worker-~diagnostic~-b4df2133-354b-400f-87f1-0fd0db20f555]: FINISHING
+[debug] [2021-08-25T20:04:39.229Z] DEBUG: [worker-pool] Shutting down IDLE worker (asia-east2-docs)
+[debug] [2021-08-25T20:04:39.230Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: FINISHING
+[debug] [2021-08-25T20:04:39.238Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-08-25T20:04:39.239Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2021-08-25T20:04:39.239Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-08-25T20:04:39.239Z] DEBUG: [worker-~diagnostic~-c42dbf80-e4b9-4344-b4f8-c9a033d72ade]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51503.sock
+[debug] [2021-08-25T20:04:39.239Z] DEBUG: [worker-~diagnostic~-c42dbf80-e4b9-4344-b4f8-c9a033d72ade]: BUSY
+[debug] [2021-08-25T20:04:39.240Z] DEBUG: [worker-~diagnostic~-b4df2133-354b-400f-87f1-0fd0db20f555]: exited
+[debug] [2021-08-25T20:04:39.240Z] DEBUG: [worker-~diagnostic~-b4df2133-354b-400f-87f1-0fd0db20f555]: FINISHED
+[debug] [2021-08-25T20:04:39.240Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: exited
+[debug] [2021-08-25T20:04:39.240Z] DEBUG: [worker-asia-east2-docs-7a42ef4e-244b-4a61-83f0-13f412671b68]: FINISHED
+[debug] [2021-08-25T20:04:39.455Z] DEBUG: [runtime-status] [51503] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:04:39.456Z] DEBUG: [runtime-status] [51503] Disabled runtime features: undefined
+[debug] [2021-08-25T20:04:39.457Z] DEBUG: [runtime-status] [51503] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:39.459Z] DEBUG: [runtime-status] [51503] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:39.460Z] DEBUG: [runtime-status] [51503] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:39.461Z] DEBUG: [runtime-status] [51503] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:04:39.461Z] DEBUG: [runtime-status] [51503] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:39.481Z] DEBUG: [runtime-status] [51503] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:04:39.481Z] DEBUG: [runtime-status] [51503] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:04:39.482Z] DEBUG: [runtime-status] [51503] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:39.482Z] DEBUG: [runtime-status] [51503] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:39.482Z] DEBUG: [runtime-status] [51503] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:39.482Z] DEBUG: [runtime-status] [51503] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:04:39.594Z] DEBUG: [worker-~diagnostic~-c42dbf80-e4b9-4344-b4f8-c9a033d72ade]: IDLE
+[debug] [2021-08-25T20:04:41.879Z] DEBUG: File /Users/leo/webproject/dicom-viewer-cloud-functions/functions/src/routes/docs.ts changed, reloading triggers
+[debug] [2021-08-25T20:04:42.884Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2021-08-25T20:04:42.885Z] DEBUG: [worker-~diagnostic~-c42dbf80-e4b9-4344-b4f8-c9a033d72ade]: FINISHING
+[debug] [2021-08-25T20:04:42.885Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2021-08-25T20:04:42.885Z] DEBUG: [worker-pool] Cleaned up workers for asia-east2-docs: 1 --> 0
+[debug] [2021-08-25T20:04:42.893Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2021-08-25T20:04:42.893Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2021-08-25T20:04:42.893Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2021-08-25T20:04:42.894Z] DEBUG: [worker-~diagnostic~-c5aa9485-24d1-49c9-8bf4-2462417041ec]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51512.sock
+[debug] [2021-08-25T20:04:42.894Z] DEBUG: [worker-~diagnostic~-c5aa9485-24d1-49c9-8bf4-2462417041ec]: BUSY
+[debug] [2021-08-25T20:04:42.896Z] DEBUG: [worker-~diagnostic~-c42dbf80-e4b9-4344-b4f8-c9a033d72ade]: exited
+[debug] [2021-08-25T20:04:42.896Z] DEBUG: [worker-~diagnostic~-c42dbf80-e4b9-4344-b4f8-c9a033d72ade]: FINISHED
+[debug] [2021-08-25T20:04:43.038Z] DEBUG: [runtime-status] [51512] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:04:43.039Z] DEBUG: [runtime-status] [51512] Disabled runtime features: undefined
+[debug] [2021-08-25T20:04:43.039Z] DEBUG: [runtime-status] [51512] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:43.041Z] DEBUG: [runtime-status] [51512] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:43.042Z] DEBUG: [runtime-status] [51512] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:43.043Z] DEBUG: [runtime-status] [51512] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:04:43.043Z] DEBUG: [runtime-status] [51512] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:43.057Z] DEBUG: [runtime-status] [51512] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:04:43.057Z] DEBUG: [runtime-status] [51512] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:04:43.057Z] DEBUG: [runtime-status] [51512] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:43.058Z] DEBUG: [runtime-status] [51512] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:43.058Z] DEBUG: [runtime-status] [51512] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:43.058Z] DEBUG: [runtime-status] [51512] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:04:43.156Z] DEBUG: [worker-~diagnostic~-c5aa9485-24d1-49c9-8bf4-2462417041ec]: IDLE
+[debug] [2021-08-25T20:04:47.246Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.246Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:47.246Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs --> asia-east2-docs
+[debug] [2021-08-25T20:04:47.246Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2021-08-25T20:04:47.254Z] DEBUG: [worker-pool] addWorker(asia-east2-docs)
+[debug] [2021-08-25T20:04:47.254Z] DEBUG: [worker-pool] Adding worker with key asia-east2-docs, total=1
+[debug] [2021-08-25T20:04:47.254Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:47.254Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:47.254Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:47.397Z] DEBUG: [runtime-status] [51515] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:04:47.398Z] DEBUG: [runtime-status] [51515] Disabled runtime features: undefined
+[debug] [2021-08-25T20:04:47.399Z] DEBUG: [runtime-status] [51515] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:47.400Z] DEBUG: [runtime-status] [51515] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:47.401Z] DEBUG: [runtime-status] [51515] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:47.402Z] DEBUG: [runtime-status] [51515] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:04:47.402Z] DEBUG: [runtime-status] [51515] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:47.416Z] DEBUG: [runtime-status] [51515] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:04:47.416Z] DEBUG: [runtime-status] [51515] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:04:47.416Z] DEBUG: [runtime-status] [51515] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:47.416Z] DEBUG: [runtime-status] [51515] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:47.417Z] DEBUG: [runtime-status] [51515] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:47.417Z] DEBUG: [runtime-status] [51515] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:04:47.506Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:47.506Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:47.506Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:47.506Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:47.507Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:47.509Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:47.509Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs, mapping to path=/
+[debug] [2021-08-25T20:04:47.511Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:47.513Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:47.515Z [GET]/ 200 3104 1.699 ms {"user":"- 2021-08-25T20:04:47.515Z [GET]/ 200 3104 1.699 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:47.515Z [GET]/ 200 3104 1.699 ms"}}
+[debug] [2021-08-25T20:04:47.516Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:47.516Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:47.516Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.534Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.534Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:47.535Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.535Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.535Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:47.535Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.536Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.536Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:47.536Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.536Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:47.537Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:47.537Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.354Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.354Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:50.354Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/api --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.355Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.355Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.355Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:50.356Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.356Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.356Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.356Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.356Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.357Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.358Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/api, mapping to path=/api
+[debug] [2021-08-25T20:04:50.359Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.360Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:50.361Z [GET]/api 200 3104 1.017 ms {"user":"- 2021-08-25T20:04:50.361Z [GET]/api 200 3104 1.017 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.361Z [GET]/api 200 3104 1.017 ms"}}
+[debug] [2021-08-25T20:04:50.363Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.363Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:50.363Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.406Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.406Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:50.406Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui.css --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.407Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.407Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.407Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:50.407Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2021-08-25T20:04:50.407Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-08-25T20:04:50.408Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.414Z] DEBUG: [worker-pool] addWorker(asia-east2-docs)
+[debug] [2021-08-25T20:04:50.415Z] DEBUG: [worker-pool] Adding worker with key asia-east2-docs, total=2
+[debug] [2021-08-25T20:04:50.415Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.415Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51518.sock
+[debug] [2021-08-25T20:04:50.415Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: BUSY
+[debug] [2021-08-25T20:04:50.416Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2021-08-25T20:04:50.417Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2021-08-25T20:04:50.417Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.425Z] DEBUG: [worker-pool] addWorker(asia-east2-docs)
+[debug] [2021-08-25T20:04:50.425Z] DEBUG: [worker-pool] Adding worker with key asia-east2-docs, total=3
+[debug] [2021-08-25T20:04:50.425Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.425Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51519.sock
+[debug] [2021-08-25T20:04:50.425Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: BUSY
+[debug] [2021-08-25T20:04:50.427Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2021-08-25T20:04:50.427Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2021-08-25T20:04:50.427Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-init.js --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.433Z] DEBUG: [worker-pool] addWorker(asia-east2-docs)
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [worker-pool] Adding worker with key asia-east2-docs, total=4
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51520.sock
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: BUSY
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.434Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.434Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.435Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.435Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui.css, mapping to path=/swagger-ui.css
+[debug] [2021-08-25T20:04:50.436Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.436Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:50.440Z [GET]/swagger-ui.css 200 143669 1.886 ms {"user":"- 2021-08-25T20:04:50.440Z [GET]/swagger-ui.css 200 143669 1.886 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.440Z [GET]/swagger-ui.css 200 143669 1.886 ms"}}
+[debug] [2021-08-25T20:04:50.440Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.441Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:50.441Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2021-08-25T20:04:50.451Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2021-08-25T20:04:50.451Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2021-08-25T20:04:50.451Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui.css.map --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.451Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.451Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.451Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:50.452Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.452Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.453Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.453Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.453Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.453Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.453Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui.css.map, mapping to path=/swagger-ui.css.map
+[debug] [2021-08-25T20:04:50.454Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.454Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:50.459Z [GET]/swagger-ui.css.map 200 274973 0.772 ms {"user":"- 2021-08-25T20:04:50.459Z [GET]/swagger-ui.css.map 200 274973 0.772 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.459Z [GET]/swagger-ui.css.map 200 274973 0.772 ms"}}
+[debug] [2021-08-25T20:04:50.460Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.460Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:50.460Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2021-08-25T20:04:50.555Z] DEBUG: [runtime-status] [51518] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:04:50.555Z] DEBUG: [runtime-status] [51519] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:04:50.556Z] DEBUG: [runtime-status] [51518] Disabled runtime features: undefined
+[debug] [2021-08-25T20:04:50.556Z] DEBUG: [runtime-status] [51519] Disabled runtime features: undefined
+[debug] [2021-08-25T20:04:50.557Z] DEBUG: [runtime-status] [51518] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:50.558Z] DEBUG: [runtime-status] [51518] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.559Z] DEBUG: [runtime-status] [51519] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:50.560Z] DEBUG: [runtime-status] [51519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.560Z] DEBUG: [runtime-status] [51518] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.561Z] DEBUG: [runtime-status] [51519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.561Z] DEBUG: [runtime-status] [51518] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:04:50.561Z] DEBUG: [runtime-status] [51518] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.562Z] DEBUG: [runtime-status] [51519] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:04:50.562Z] DEBUG: [runtime-status] [51519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.565Z] DEBUG: [runtime-status] [51520] Functions runtime initialized. {"cwd":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions","node_version":"14.17.0"}
+[debug] [2021-08-25T20:04:50.566Z] DEBUG: [runtime-status] [51520] Disabled runtime features: undefined
+[debug] [2021-08-25T20:04:50.567Z] DEBUG: [runtime-status] [51520] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:50.568Z] DEBUG: [runtime-status] [51520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.570Z] DEBUG: [runtime-status] [51520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.571Z] DEBUG: [runtime-status] [51520] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2021-08-25T20:04:50.572Z] DEBUG: [runtime-status] [51520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.577Z] DEBUG: [runtime-status] [51518] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:04:50.577Z] DEBUG: [runtime-status] [51518] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:04:50.577Z] DEBUG: [runtime-status] [51518] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.578Z] DEBUG: [runtime-status] [51519] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:04:50.578Z] DEBUG: [runtime-status] [51519] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:04:50.578Z] DEBUG: [runtime-status] [51518] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:50.578Z] DEBUG: [runtime-status] [51518] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.578Z] DEBUG: [runtime-status] [51518] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:04:50.579Z] DEBUG: [runtime-status] [51519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.579Z] DEBUG: [runtime-status] [51519] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:50.579Z] DEBUG: [runtime-status] [51519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.579Z] DEBUG: [runtime-status] [51519] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:04:50.589Z] DEBUG: [runtime-status] [51520] Checked functions.config() {"config":{}}
+[debug] [2021-08-25T20:04:50.589Z] DEBUG: [runtime-status] [51520] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}}
+[debug] [2021-08-25T20:04:50.589Z] DEBUG: [runtime-status] [51520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.589Z] DEBUG: [runtime-status] [51520] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2021-08-25T20:04:50.590Z] DEBUG: [runtime-status] [51520] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.15.4","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2021-08-25T20:04:50.590Z] DEBUG: [runtime-status] [51520] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.11.1","resolution":"/Users/leo/webproject/dicom-viewer-cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2021-08-25T20:04:50.680Z] DEBUG: [runtime-status] [51518] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.680Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.680Z] DEBUG: [runtime-status] [51518] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.680Z] DEBUG: [runtime-status] [51518] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.681Z] DEBUG: [runtime-status] [51519] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.681Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.681Z] DEBUG: [runtime-status] [51518] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51518.sock
+[debug] [2021-08-25T20:04:50.681Z] DEBUG: [runtime-status] [51519] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.681Z] DEBUG: [runtime-status] [51519] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.682Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.682Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js, mapping to path=/swagger-ui-bundle.js
+[debug] [2021-08-25T20:04:50.683Z] DEBUG: [runtime-status] [51519] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51519.sock
+[debug] [2021-08-25T20:04:50.683Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.683Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js, mapping to path=/swagger-ui-standalone-preset.js
+[debug] [2021-08-25T20:04:50.684Z] DEBUG: [runtime-status] [51518] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.685Z] DEBUG: [runtime-status] [51519] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.686Z] DEBUG: [runtime-status] [51518] Ephemeral server survived.
+[debug] [2021-08-25T20:04:50.687Z] DEBUG: [runtime-status] [51519] Ephemeral server survived.
+[debug] [2021-08-25T20:04:50.691Z] DEBUG: [runtime-status] [51520] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.691Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.691Z] DEBUG: [runtime-status] [51520] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.692Z] DEBUG: [runtime-status] [51520] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.693Z] DEBUG: [runtime-status] [51520] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51520.sock
+[info] >  - 2021-08-25T20:04:50.693Z [GET]/swagger-ui-standalone-preset.js 200 337216 1.671 ms {"user":"- 2021-08-25T20:04:50.693Z [GET]/swagger-ui-standalone-preset.js 200 337216 1.671 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.693Z [GET]/swagger-ui-standalone-preset.js 200 337216 1.671 ms"}}
+[debug] [2021-08-25T20:04:50.695Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.695Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-init.js, mapping to path=/swagger-ui-init.js
+[debug] [2021-08-25T20:04:50.695Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.695Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: IDLE
+[debug] [2021-08-25T20:04:50.695Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-08-25T20:04:50.698Z] DEBUG: [runtime-status] [51520] Ephemeral server handling GET request
+[info] >  - 2021-08-25T20:04:50.699Z [GET]/swagger-ui-bundle.js 200 1091405 1.693 ms {"user":"- 2021-08-25T20:04:50.699Z [GET]/swagger-ui-bundle.js 200 1091405 1.693 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.699Z [GET]/swagger-ui-bundle.js 200 1091405 1.693 ms"}}
+[debug] [2021-08-25T20:04:50.699Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.699Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: IDLE
+[debug] [2021-08-25T20:04:50.700Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] >  - 2021-08-25T20:04:50.701Z [GET]/swagger-ui-init.js 200 1336 1.061 ms {"user":"- 2021-08-25T20:04:50.701Z [GET]/swagger-ui-init.js 200 1336 1.061 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.701Z [GET]/swagger-ui-init.js 200 1336 1.061 ms"}}
+[debug] [2021-08-25T20:04:50.702Z] DEBUG: [runtime-status] [51520] Ephemeral server survived.
+[debug] [2021-08-25T20:04:50.702Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.702Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: IDLE
+[debug] [2021-08-25T20:04:50.702Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.716Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.716Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:50.716Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js.map --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.716Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.716Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.716Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:50.716Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.716Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.716Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.716Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.717Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.717Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.717Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js.map, mapping to path=/swagger-ui-bundle.js.map
+[debug] [2021-08-25T20:04:50.717Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.718Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:50.749Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.516 ms {"user":"- 2021-08-25T20:04:50.749Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.516 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.749Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.516 ms"}}
+[debug] [2021-08-25T20:04:50.749Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.749Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:50.749Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.780Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.780Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:50.780Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js.map --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.780Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.780Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.780Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:50.780Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.780Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.780Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.781Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.781Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.781Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.781Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js.map, mapping to path=/swagger-ui-standalone-preset.js.map
+[debug] [2021-08-25T20:04:50.781Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.781Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:50.793Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.480 ms {"user":"- 2021-08-25T20:04:50.793Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.480 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.793Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.480 ms"}}
+[debug] [2021-08-25T20:04:50.793Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.793Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:50.793Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.805Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:04:50.806Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:04:50.806Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/favicon-32x32.png --> asia-east2-docs
+[debug] [2021-08-25T20:04:50.806Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:04:50.806Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.806Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:04:50.807Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:04:50.807Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:04:50.807Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:04:50.807Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:04:50.807Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:04:50.807Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:04:50.807Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/favicon-32x32.png, mapping to path=/favicon-32x32.png
+[debug] [2021-08-25T20:04:50.808Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:04:50.808Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:04:50.808Z [GET]/favicon-32x32.png 200 628 0.484 ms {"user":"- 2021-08-25T20:04:50.808Z [GET]/favicon-32x32.png 200 628 0.484 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:04:50.808Z [GET]/favicon-32x32.png 200 628 0.484 ms"}}
+[debug] [2021-08-25T20:04:50.809Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:04:50.809Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:04:50.809Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.039Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.039Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.039Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/ --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.039Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.040Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.040Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:07.041Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.041Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.041Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.041Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.041Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.042Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.043Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/, mapping to path=/
+[debug] [2021-08-25T20:05:07.044Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.044Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:07.045Z [GET]/ 200 3104 0.754 ms {"user":"- 2021-08-25T20:05:07.045Z [GET]/ 200 3104 0.754 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.045Z [GET]/ 200 3104 0.754 ms"}}
+[debug] [2021-08-25T20:05:07.046Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.046Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:07.046Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.072Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.072Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.072Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui.css --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.072Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.072Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.073Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:07.073Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.073Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-08-25T20:05:07.073Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.073Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.073Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51518.sock
+[debug] [2021-08-25T20:05:07.074Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: BUSY
+[debug] [2021-08-25T20:05:07.074Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.074Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.074Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.074Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.074Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.075Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.075Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui.css, mapping to path=/swagger-ui.css
+[debug] [2021-08-25T20:05:07.076Z] DEBUG: [runtime-status] [51518] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.076Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.076Z] DEBUG: [runtime-status] [51518] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.076Z] DEBUG: [runtime-status] [51518] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.076Z] DEBUG: [runtime-status] [51518] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51518.sock
+[debug] [2021-08-25T20:05:07.076Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.076Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js, mapping to path=/swagger-ui-standalone-preset.js
+[debug] [2021-08-25T20:05:07.077Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2021-08-25T20:05:07.077Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2021-08-25T20:05:07.077Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-init.js --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.077Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.077Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51519.sock
+[debug] [2021-08-25T20:05:07.077Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: BUSY
+[debug] [2021-08-25T20:05:07.078Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2021-08-25T20:05:07.078Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2021-08-25T20:05:07.078Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.078Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.078Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51520.sock
+[debug] [2021-08-25T20:05:07.078Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: BUSY
+[debug] [2021-08-25T20:05:07.079Z] DEBUG: [runtime-status] [51519] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.079Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.079Z] DEBUG: [runtime-status] [51519] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.079Z] DEBUG: [runtime-status] [51519] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.079Z] DEBUG: [runtime-status] [51519] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51519.sock
+[debug] [2021-08-25T20:05:07.080Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.080Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-init.js, mapping to path=/swagger-ui-init.js
+[debug] [2021-08-25T20:05:07.081Z] DEBUG: [runtime-status] [51520] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.081Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.081Z] DEBUG: [runtime-status] [51520] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.081Z] DEBUG: [runtime-status] [51520] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.081Z] DEBUG: [runtime-status] [51520] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51520.sock
+[debug] [2021-08-25T20:05:07.082Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.082Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js, mapping to path=/swagger-ui-bundle.js
+[debug] [2021-08-25T20:05:07.083Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.083Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[debug] [2021-08-25T20:05:07.083Z] DEBUG: [runtime-status] [51518] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.083Z] DEBUG: [runtime-status] [51518] Ephemeral server survived.
+[debug] [2021-08-25T20:05:07.086Z] DEBUG: [runtime-status] [51519] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.086Z] DEBUG: [runtime-status] [51520] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.087Z] DEBUG: [runtime-status] [51520] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:07.088Z [GET]/swagger-ui-init.js 200 1336 1.957 ms {"user":"- 2021-08-25T20:05:07.088Z [GET]/swagger-ui-init.js 200 1336 1.957 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.088Z [GET]/swagger-ui-init.js 200 1336 1.957 ms"}}
+[debug] [2021-08-25T20:05:07.089Z] DEBUG: [runtime-status] [51519] Ephemeral server survived.
+[debug] [2021-08-25T20:05:07.089Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.089Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: IDLE
+[debug] [2021-08-25T20:05:07.089Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] >  - 2021-08-25T20:05:07.090Z [GET]/swagger-ui.css 200 143669 1.619 ms {"user":"- 2021-08-25T20:05:07.090Z [GET]/swagger-ui.css 200 143669 1.619 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.090Z [GET]/swagger-ui.css 200 143669 1.619 ms"}}
+[debug] [2021-08-25T20:05:07.093Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.093Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:07.093Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] >  - 2021-08-25T20:05:07.102Z [GET]/swagger-ui-standalone-preset.js 200 337216 1.613 ms {"user":"- 2021-08-25T20:05:07.102Z [GET]/swagger-ui-standalone-preset.js 200 337216 1.613 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.102Z [GET]/swagger-ui-standalone-preset.js 200 337216 1.613 ms"}}
+[debug] [2021-08-25T20:05:07.103Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.103Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: IDLE
+[debug] [2021-08-25T20:05:07.103Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.110Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.110Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-08-25T20:05:07.110Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui.css.map --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.110Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.110Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.110Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:07.111Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.111Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.111Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.111Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.112Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.112Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.112Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui.css.map, mapping to path=/swagger-ui.css.map
+[debug] [2021-08-25T20:05:07.114Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.114Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:07.115Z [GET]/swagger-ui-bundle.js 200 1091405 4.830 ms {"user":"- 2021-08-25T20:05:07.115Z [GET]/swagger-ui-bundle.js 200 1091405 4.830 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.115Z [GET]/swagger-ui-bundle.js 200 1091405 4.830 ms"}}
+[debug] [2021-08-25T20:05:07.116Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.116Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: IDLE
+[debug] [2021-08-25T20:05:07.116Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] >  - 2021-08-25T20:05:07.119Z [GET]/swagger-ui.css.map 200 274973 1.083 ms {"user":"- 2021-08-25T20:05:07.119Z [GET]/swagger-ui.css.map 200 274973 1.083 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.119Z [GET]/swagger-ui.css.map 200 274973 1.083 ms"}}
+[debug] [2021-08-25T20:05:07.119Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.119Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:07.120Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.142Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.142Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.142Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js.map --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.142Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.142Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.142Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.143Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js.map, mapping to path=/swagger-ui-bundle.js.map
+[debug] [2021-08-25T20:05:07.143Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.144Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:07.163Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.607 ms {"user":"- 2021-08-25T20:05:07.163Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.607 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.163Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.607 ms"}}
+[debug] [2021-08-25T20:05:07.164Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.164Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:07.164Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.196Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:07.196Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:07.196Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js.map --> asia-east2-docs
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:07.196Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:07.196Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:07.197Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:07.197Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js.map, mapping to path=/swagger-ui-standalone-preset.js.map
+[debug] [2021-08-25T20:05:07.197Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:07.197Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:07.207Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.583 ms {"user":"- 2021-08-25T20:05:07.207Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.583 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:07.207Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.583 ms"}}
+[debug] [2021-08-25T20:05:07.207Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:07.207Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:07.207Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.084Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.084Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.084Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs --> asia-east2-docs
+[debug] [2021-08-25T20:05:09.084Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:09.084Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:09.084Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:09.085Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:09.085Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:09.085Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:09.086Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:09.086Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:09.086Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:09.087Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs, mapping to path=/
+[debug] [2021-08-25T20:05:09.088Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:09.088Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:09.089Z [GET]/ 200 3104 0.597 ms {"user":"- 2021-08-25T20:05:09.089Z [GET]/ 200 3104 0.597 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:09.089Z [GET]/ 200 3104 0.597 ms"}}
+[debug] [2021-08-25T20:05:09.090Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:09.090Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:09.090Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.109Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.109Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.109Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.110Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.110Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.110Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.110Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.110Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.111Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.111Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.112Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.113Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.121Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.121Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.122Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.125Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:09.125Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:09.126Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.446Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.446Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.446Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/ --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.446Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.446Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.446Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:11.447Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.447Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.447Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.447Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.447Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.448Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.448Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/, mapping to path=/
+[debug] [2021-08-25T20:05:11.450Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.450Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:11.451Z [GET]/ 200 3104 0.539 ms {"user":"- 2021-08-25T20:05:11.451Z [GET]/ 200 3104 0.539 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.451Z [GET]/ 200 3104 0.539 ms"}}
+[debug] [2021-08-25T20:05:11.451Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.451Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:11.451Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.476Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.476Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.476Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui.css --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.477Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.477Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.477Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:11.477Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.477Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-08-25T20:05:11.477Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.477Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.477Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51518.sock
+[debug] [2021-08-25T20:05:11.477Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: BUSY
+[debug] [2021-08-25T20:05:11.478Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2021-08-25T20:05:11.478Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2021-08-25T20:05:11.478Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.478Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.479Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51519.sock
+[debug] [2021-08-25T20:05:11.479Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: BUSY
+[debug] [2021-08-25T20:05:11.479Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2021-08-25T20:05:11.479Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2021-08-25T20:05:11.479Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-init.js --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51520.sock
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: BUSY
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.480Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.480Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.481Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.481Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui.css, mapping to path=/swagger-ui.css
+[debug] [2021-08-25T20:05:11.482Z] DEBUG: [runtime-status] [51518] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.482Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.482Z] DEBUG: [runtime-status] [51518] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.482Z] DEBUG: [runtime-status] [51518] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.482Z] DEBUG: [runtime-status] [51518] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51518.sock
+[debug] [2021-08-25T20:05:11.483Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.483Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js, mapping to path=/swagger-ui-bundle.js
+[debug] [2021-08-25T20:05:11.483Z] DEBUG: [runtime-status] [51519] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.483Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.483Z] DEBUG: [runtime-status] [51519] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.483Z] DEBUG: [runtime-status] [51519] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.483Z] DEBUG: [runtime-status] [51519] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51519.sock
+[debug] [2021-08-25T20:05:11.484Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.484Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js, mapping to path=/swagger-ui-standalone-preset.js
+[debug] [2021-08-25T20:05:11.484Z] DEBUG: [runtime-status] [51520] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.484Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.484Z] DEBUG: [runtime-status] [51520] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.484Z] DEBUG: [runtime-status] [51520] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.484Z] DEBUG: [runtime-status] [51520] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51520.sock
+[debug] [2021-08-25T20:05:11.485Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.485Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-init.js, mapping to path=/swagger-ui-init.js
+[debug] [2021-08-25T20:05:11.487Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.487Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[debug] [2021-08-25T20:05:11.488Z] DEBUG: [runtime-status] [51520] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.488Z] DEBUG: [runtime-status] [51519] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.488Z] DEBUG: [runtime-status] [51519] Ephemeral server survived.
+[debug] [2021-08-25T20:05:11.488Z] DEBUG: [runtime-status] [51518] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.488Z] DEBUG: [runtime-status] [51518] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:11.488Z [GET]/swagger-ui-init.js 200 1336 0.451 ms {"user":"- 2021-08-25T20:05:11.488Z [GET]/swagger-ui-init.js 200 1336 0.451 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.488Z [GET]/swagger-ui-init.js 200 1336 0.451 ms"}}
+[debug] [2021-08-25T20:05:11.489Z] DEBUG: [runtime-status] [51520] Ephemeral server survived.
+[debug] [2021-08-25T20:05:11.490Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.490Z] DEBUG: [worker-asia-east2-docs-1036cb63-703d-4206-9367-255aa1fe5a6e]: IDLE
+[debug] [2021-08-25T20:05:11.490Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[info] >  - 2021-08-25T20:05:11.494Z [GET]/swagger-ui.css 200 143669 1.634 ms {"user":"- 2021-08-25T20:05:11.494Z [GET]/swagger-ui.css 200 143669 1.634 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.494Z [GET]/swagger-ui.css 200 143669 1.634 ms"}}
+[debug] [2021-08-25T20:05:11.495Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.496Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:11.496Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] >  - 2021-08-25T20:05:11.503Z [GET]/swagger-ui-standalone-preset.js 200 337216 2.473 ms {"user":"- 2021-08-25T20:05:11.503Z [GET]/swagger-ui-standalone-preset.js 200 337216 2.473 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.503Z [GET]/swagger-ui-standalone-preset.js 200 337216 2.473 ms"}}
+[debug] [2021-08-25T20:05:11.504Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.504Z] DEBUG: [worker-asia-east2-docs-6f15520b-53cc-4403-a557-ba99fb3f836c]: IDLE
+[debug] [2021-08-25T20:05:11.504Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.510Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.511Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2021-08-25T20:05:11.511Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui.css.map --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.511Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.511Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.511Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[info] >  - 2021-08-25T20:05:11.510Z [GET]/swagger-ui-bundle.js 200 1091405 1.659 ms {"user":"- 2021-08-25T20:05:11.510Z [GET]/swagger-ui-bundle.js 200 1091405 1.659 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.510Z [GET]/swagger-ui-bundle.js 200 1091405 1.659 ms"}}
+[debug] [2021-08-25T20:05:11.511Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.511Z] DEBUG: [worker-asia-east2-docs-96dbf088-5bee-4538-ae8b-b55cdf6ad005]: IDLE
+[debug] [2021-08-25T20:05:11.512Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.512Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.512Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.512Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.513Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.513Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.513Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.513Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui.css.map, mapping to path=/swagger-ui.css.map
+[debug] [2021-08-25T20:05:11.514Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.514Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:11.515Z [GET]/swagger-ui.css.map 200 274973 0.393 ms {"user":"- 2021-08-25T20:05:11.515Z [GET]/swagger-ui.css.map 200 274973 0.393 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.515Z [GET]/swagger-ui.css.map 200 274973 0.393 ms"}}
+[debug] [2021-08-25T20:05:11.515Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.515Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:11.515Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.532Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.532Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.532Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js.map --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.532Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.532Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.532Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:11.532Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.533Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.533Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.533Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.533Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.534Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.534Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-bundle.js.map, mapping to path=/swagger-ui-bundle.js.map
+[debug] [2021-08-25T20:05:11.534Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.534Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:11.551Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.345 ms {"user":"- 2021-08-25T20:05:11.551Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.345 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.551Z [GET]/swagger-ui-bundle.js.map 200 4777279 0.345 ms"}}
+[debug] [2021-08-25T20:05:11.552Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.552Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:11.552Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.601Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2021-08-25T20:05:11.601Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2021-08-25T20:05:11.601Z] Accepted request GET /dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js.map --> asia-east2-docs
+[debug] [2021-08-25T20:05:11.601Z] DEBUG: [worker-pool] submitWork(triggerId=asia-east2-docs)
+[debug] [2021-08-25T20:05:11.601Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: Assigning socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.601Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: BUSY
+[debug] [2021-08-25T20:05:11.602Z] DEBUG: [runtime-status] [51515] Trigger "asia-east2-docs" has been found, beginning invocation!
+[debug] [2021-08-25T20:05:11.602Z] [functions] Beginning execution of "asia-east2-docs"
+[debug] [2021-08-25T20:05:11.602Z] DEBUG: [runtime-status] [51515] triggerDefinition {"regions":["asia-east2"],"timeout":"540s","availableMemoryMb":1024,"httpsTrigger":{},"name":"docs","entryPoint":"docs","region":"asia-east2","id":"asia-east2-docs"}
+[debug] [2021-08-25T20:05:11.602Z] DEBUG: [runtime-status] [51515] Running asia-east2-docs in mode HTTPS
+[debug] [2021-08-25T20:05:11.602Z] DEBUG: [runtime-status] [51515] Attempting to listen to socketPath: /var/folders/7v/4r2pcn216gq3tvvzb4fhdlkc0000gn/T/fire_emu_51515.sock
+[debug] [2021-08-25T20:05:11.602Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2021-08-25T20:05:11.602Z] DEBUG: [functions] Got req.url=/dicom-viewer-dac76/asia-east2/docs/swagger-ui-standalone-preset.js.map, mapping to path=/swagger-ui-standalone-preset.js.map
+[debug] [2021-08-25T20:05:11.603Z] DEBUG: [runtime-status] [51515] Ephemeral server handling GET request
+[debug] [2021-08-25T20:05:11.603Z] DEBUG: [runtime-status] [51515] Ephemeral server survived.
+[info] >  - 2021-08-25T20:05:11.609Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.277 ms {"user":"- 2021-08-25T20:05:11.609Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.277 ms","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-east2-docs"},"message":"\u001b[90m> \u001b[39m - 2021-08-25T20:05:11.609Z [GET]/swagger-ui-standalone-preset.js.map 200 1536542 0.277 ms"}}
+[debug] [2021-08-25T20:05:11.610Z] [functions] Finished "asia-east2-docs" in ~1s
+[debug] [2021-08-25T20:05:11.610Z] DEBUG: [worker-asia-east2-docs-2ac84f41-90a1-49f9-ba66-4b914b8d937b]: IDLE
+[debug] [2021-08-25T20:05:11.610Z] [work-queue] {"queueLength":0,"workRunningCount":0}

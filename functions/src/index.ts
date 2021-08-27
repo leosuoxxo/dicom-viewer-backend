@@ -1,9 +1,17 @@
-import * as functions from "firebase-functions";
-
+import * as firebaseFunctions from "firebase-functions";
+import OrganizationRoutes from './routes/organization';
+import DocsRoutes from './routes/docs';
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+
+const functions = firebaseFunctions.region('asia-east2').runWith({
+  timeoutSeconds: 540,
+  memory: '1GB'
+});
+
+
+exports.organization = functions.https.onRequest(OrganizationRoutes);
+
+
+exports.docs = functions.https.onRequest(DocsRoutes);
