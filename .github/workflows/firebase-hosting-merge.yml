@@ -3,19 +3,31 @@
 
 name: Deploy to Firebase Hosting on merge
 'on':
+  pull_request:
   push:
     branches:
       - dev
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      uses: google-github-actions/setup-gcloud@master
-      with:
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
-        export_default_credentials: true
-      uses: actions/checkout@v2
-      uses: google-github-actions/deploy-cloud-functions@main
-      with:
-        runtime: nodejs14
-        credentials: ${{ secrets.gcp_credentials }}
+    run:
+      # worker runs on latest ubuntu
+      runs-on: ubuntu-latest
+
+      steps:
+      # checkout to our repository so we have access to the source code
+      - uses: actions/checkout@v2
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.2.0
+        with:
+          project_id: ${{ secrets.gcp_project }}
+          service_account_key: ${{ secrets.gcp_credentials }}
+          export_default_credentials: true
+      
+      # the actual deployment to google
+      - name: Cloud Functions Deploy
+        uses: google-github-actions/deploy-cloud-functions@main
+        with:
+          name: my-function
+          runtime: nodejs10
+          credentials: ${{ secrets.gcp_credentials }}
