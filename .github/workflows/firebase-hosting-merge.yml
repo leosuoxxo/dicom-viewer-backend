@@ -26,4 +26,5 @@ jobs:
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: my-function
+          region: asia-east2
           runtime: nodejs14
