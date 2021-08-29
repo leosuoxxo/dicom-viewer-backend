@@ -26,4 +26,4 @@ jobs:
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: my-function
-          runtime: nodejs10
+          runtime: nodejs14
