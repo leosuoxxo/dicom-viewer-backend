@@ -10,16 +10,18 @@ const { validator } = require('../utils/jsonSchemaValidator.js');
 const { convertValidationErrorsToString } = require('../utils/helper');
 
 app.get('/', (req, res) => {
-  const { skip, limit } = req.query;
+  const { skip, limit, name, id } = req.query;
   const MAXIMUM = 100;
   const schema = {
     type: 'object',
     properties: {
       ...PAGINATION_SCHEMA(),
+      name: STRING_SCHEMA(),
     },
   };
 
   const data = {
+    name,
     skip: Number(skip) || 0,
     limit: Number(limit) || 10,
   };

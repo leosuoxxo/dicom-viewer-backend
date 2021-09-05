@@ -1,10 +1,26 @@
 const { ERROR_CODE } = require('../constants.js');
 const OrganizationModel = require('../models/organization');
+const OrganizationSchema = require('../models/schemas/organization.schemas')
 const { shortId } = require('../utils/helper');
 const { paginateArray, isExist, runTasks, removeUndefinedFromObject } = require('../utils/helper');
 const logger = require('../utils/logger')
 
+const filterOrganizationsByQuery = (data, query) => {
+  const { name, skip, limit } = query;
+  if (name) {
+    data = data.filter(item => RegExp(name, 'i').test(item[OrganizationSchema.NAME]));
+  }
+
+  const result = {
+    total: data.length,
+    organizations: paginateArray(data, skip, limit)
+  };
+
+  return result;
+};
+
 exports.getOrganizations = async ({
+  name,
   skip,
   limit,
 }) => {
@@ -21,10 +37,12 @@ exports.getOrganizations = async ({
     }
 
     let organizations = tasks.get_organizations;
-    const data = {
-      total: organizations.length,
-      organizations: paginateArray(organizations, skip, limit)
-    };
+
+    const data = filterOrganizationsByQuery(organizations, {
+      name,
+      skip,
+      limit,
+    });
 
     return Promise.resolve([null, data]);
 
