@@ -10,7 +10,7 @@ const { validator } = require('../utils/jsonSchemaValidator.js');
 const { convertValidationErrorsToString } = require('../utils/helper');
 
 app.get('/', (req, res) => {
-  const { skip, limit, name, id } = req.query;
+  const { skip, limit, name } = req.query;
   const MAXIMUM = 100;
   const schema = {
     type: 'object',
@@ -113,7 +113,7 @@ app.post('/', (req, res) => {
       expiredAt: TIMESTAMP_SCHEMA(),
       isPublish: BOOLEAN_SCHEMA()
     },
-    required: ['name', 'expiredAt']
+    required: ['name']
   };
 
   const validate = validator(schema);
@@ -224,6 +224,79 @@ app.delete('/:organizationId', (req, res) => {
       return res.send(result);
     }
     return res.send(jsonResult.success());
+  });
+});
+
+app.get('/authenticate/:code', (req, res) => {
+  const { code } = req.params;
+
+  const data = {
+    code
+  };
+
+  const schema = {
+    type: 'object',
+    properties: {
+      code: STRING_SCHEMA(),
+    },
+  };
+
+  const validate = validator(schema);
+  let result = null;
+  if (!validate(data) || validate.errors) {
+    result = jsonResult.failure(ERROR_CODE.COMMON.ValidationError, `Validation error ${convertValidationErrorsToString(validate.errors)}`);
+  }
+
+  if (result) {
+    req.error = result.error;
+    return res.send(result);
+  }
+
+
+  return OrganizationController.authenticateCode(code).then(([err]) => {
+    if (err) {
+      const result = jsonResult.failure(err, `Authenticate code error`);
+      req.error = result.error;
+      return res.send(result);
+    }
+    return res.send(jsonResult.success());
+  });
+
+});
+
+
+app.post('/:organizationId/code', (req, res) => {
+  const { organizationId } = req.params;
+
+  const data = {
+    organizationId,
+  };
+
+  const schema = {
+    type: 'object',
+    properties: {
+      organizationId: UUID_SCHEMA(),
+    },
+  };
+
+  const validate = validator(schema);
+  let result = null;
+  if (!validate(data) || validate.errors) {
+    result = jsonResult.failure(ERROR_CODE.COMMON.ValidationError, `Validation error ${convertValidationErrorsToString(validate.errors)}`);
+  }
+
+  if (result) {
+    req.error = result.error;
+    return res.send(result);
+  }
+
+  return OrganizationController.renewCode(data).then(([err, organization]) => {
+    if (err) {
+      const result = jsonResult.failure(err, `renew code error`);
+      req.error = result.error;
+      return res.send(result);
+    }
+    return res.send(jsonResult.success(organization));
   });
 });
 

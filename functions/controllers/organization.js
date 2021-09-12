@@ -3,6 +3,7 @@ const OrganizationModel = require('../models/organization');
 const OrganizationSchema = require('../models/schemas/organization.schemas')
 const { shortId } = require('../utils/helper');
 const { paginateArray, isExist, runTasks, removeUndefinedFromObject } = require('../utils/helper');
+const { Code } = require('../utils/code');
 const logger = require('../utils/logger')
 
 const filterOrganizationsByQuery = (data, query) => {
@@ -85,17 +86,21 @@ exports.createOrganization = async ({
   try {
     // const [verifyErr] = await verifyUserRole({ token, userId });
     // if (verifyErr) return Promise.resolve([verifyErr]);
+    const code = new Code();
+    const baseCode = code.generateBaseCode(8);
+    const authenticationCode = code.encode(baseCode);
 
     const data = removeUndefinedFromObject({
       id: shortId(),
       taxIdNumber,
       contactPerson,
-      authenticationCode: null,
+      authenticationCode,
+      baseCode,
       name,
       contactPerson,
       createdAt: Date.now(),
       updatedAt: Date.now(),
-      expiredAt,
+      expiredAt: expiredAt ? expiredAt : Date.now(),
       isPublish,
     });
 
@@ -169,6 +174,68 @@ exports.deleteOrganization = async (id) => {
 
   } catch (err) {
     logger.error('Delete Organization error', err);
+    return Promise.resolve([ERROR_CODE.COMMON.InternalError]);
+  }
+}
+
+exports.authenticateCode = async (code) => {
+
+  try {
+
+    let err;
+    [err, organization] = await OrganizationModel.authenticateCode(code);
+    if (err) {
+      return Promise.resolve([err,]);
+    }
+
+    if(!organization[OrganizationSchema.IS_PUBLISH]) {
+      return Promise.resolve([ERROR_CODE.ORGANIZATION.NotActivated]);
+    }
+
+    const now = Date.now();
+    if(organization[OrganizationSchema.EXPIRED_AT] < now) {
+      return Promise.resolve([ERROR_CODE.ORGANIZATION.Expired]);
+    }
+
+    return Promise.resolve([null, organization]);
+
+  } catch (err) {
+    logger.error('Authenticate Code error', err);
+    return Promise.resolve([ERROR_CODE.COMMON.InternalError]);
+  }
+}
+
+
+exports.renewCode = async ({
+  organizationId: id,
+}) => {
+  try {
+    // const [verifyErr] = await verifyUserRole({ token, userId });
+    // if (verifyErr) return Promise.resolve([verifyErr]);
+
+    let [err,organization] = await getOrganizationById(id);
+    if (err) {
+      return Promise.resolve([err]);
+    }
+
+    const code = new Code();
+    const baseCode = code.generateBaseCode(8);
+    const authenticationCode = code.encode(baseCode);
+
+    const data = removeUndefinedFromObject({
+      [OrganizationSchema.ID]: id,
+      [OrganizationSchema.UPDATED_AT]: Date.now(),
+      [OrganizationSchema.AUTHENTICATION_CODE]: authenticationCode
+    });
+
+    [err, organization] = await OrganizationModel.renewCode(data)
+    if (err) {
+      return Promise.resolve([err]);
+    }
+
+    return Promise.resolve([null, organization]);
+  } catch (err) {
+    logger.error('update organization error', err);
     return Promise.resolve([ERROR_CODE.COMMON.InternalError]);
   }
 }

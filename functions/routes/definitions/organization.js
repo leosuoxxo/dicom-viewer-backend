@@ -142,6 +142,42 @@ module.exports = generateTemplate({
         }
       }
     },
+    '/authenticate/{code}': {
+      get: {
+        tags: [
+          'Authenticate'
+        ],
+        summary: 'authenticate code',
+        security: [],
+        parameters: [
+          convertSchemaToParameter('code', UUID_SCHEMA(), 'path', 'authenticate code'),
+        ],
+        responses: {
+          '200': successfulResponse({
+            '$ref': '#/components/schemas/Organization',
+          }),
+          Error: getErrorResponses([1000, 1003, 2001, 2002]),
+        }
+      },
+    },
+    '/{organizationId}/code': {
+      post: {
+        tags: [
+          'Organization'
+        ],
+        summary: 'Renew Code',
+        security: [],
+        parameters: [
+          convertSchemaToParameter('organizationId', UUID_SCHEMA(), 'path', 'Organization Id'),
+        ],
+        responses: {
+          '200': successfulResponse({
+            '$ref': '#/components/schemas/Organization',
+          }),
+          Error: getErrorResponses([1000, 2002]),
+        }
+      },
+    }
   },
   schemas: {
     Organization: {
@@ -161,7 +197,13 @@ module.exports = generateTemplate({
     },
     Errors: ERROR_DESCRIPTION_SCHEMA([
       1000,
+      1001,
+      1002,
       1003,
+      1004,
+      2000,
+      2001,
+      2002
     ]),
   },
   tags: [

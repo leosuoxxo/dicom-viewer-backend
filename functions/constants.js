@@ -9,6 +9,8 @@ const ERROR_CODE = {
   ORGANIZATION: {
     IDisRequired: 2000,
     NotExist: 2001,
+    Expired: 2002,
+    NotActivated: 2003
   }
 };
 
