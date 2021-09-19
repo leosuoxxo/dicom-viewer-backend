@@ -59,7 +59,6 @@ exports.createOrganization = async (organization) => {
   try {
     const { id } = organization;
     const ref = db.collection(ORGANIZATIONS).doc(id);
-
     await ref.set(organization);
 
     return Promise.resolve([null, organization]);

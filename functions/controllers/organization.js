@@ -77,11 +77,10 @@ const getOrganizationById = async (id) => {
 exports.getOrganizationById = getOrganizationById;
 
 exports.createOrganization = async ({
-  taxIdNumber,
   name,
-  contactPerson,
   expiredAt,
   isPublish,
+  machineIds,
 }) => {
   try {
     // const [verifyErr] = await verifyUserRole({ token, userId });
@@ -92,12 +91,10 @@ exports.createOrganization = async ({
 
     const data = removeUndefinedFromObject({
       id: shortId(),
-      taxIdNumber,
-      contactPerson,
       authenticationCode,
       baseCode,
       name,
-      contactPerson,
+      machineIds,
       createdAt: Date.now(),
       updatedAt: Date.now(),
       expiredAt: expiredAt ? expiredAt : Date.now(),
@@ -118,11 +115,10 @@ exports.createOrganization = async ({
 
 exports.updateOrganization = async ({
   organizationId: id,
-  taxIdNumber,
   name,
-  contactPerson,
   expiredAt,
   isPublish,
+  machineIds,
 }) => {
   try {
     // const [verifyErr] = await verifyUserRole({ token, userId });
@@ -135,12 +131,11 @@ exports.updateOrganization = async ({
 
     const data = removeUndefinedFromObject({
       id,
-      taxIdNumber,
       name,
-      contactPerson,
       updatedAt: Date.now(),
       expiredAt,
       isPublish,
+      machineIds,
     });
 
     [err, organization] = await OrganizationModel.updateOrganization(data)

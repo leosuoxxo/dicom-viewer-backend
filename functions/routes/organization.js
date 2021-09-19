@@ -4,8 +4,8 @@ const app = require('./middleware/app.js')(whitelist, 'organization.js');
 const jsonResult = require('../utils/jsonResult.js');
 const { ERROR_CODE } = require('../constants.js');
 const OrganizationController = require('../controllers/organization');
-const OrganizationSchema = require('../models/schemas/organization.schemas');
-const { ARRAY_SCHEMA, UUID_SCHEMA, STRING_SCHEMA, BOOLEAN_SCHEMA, PAGINATION_SCHEMA, TIMESTAMP_SCHEMA } = require('./json-schemas/common.js');
+const { UUID_SCHEMA, STRING_SCHEMA, BOOLEAN_SCHEMA, PAGINATION_SCHEMA, TIMESTAMP_SCHEMA } = require('./json-schemas/common.js');
+const { MACHINE_IDS_SCHEMA } = require('./json-schemas/organization');
 const { validator } = require('../utils/jsonSchemaValidator.js');
 const { convertValidationErrorsToString } = require('../utils/helper');
 
@@ -87,19 +87,16 @@ app.get('/:organizationId', (req, res) => {
 app.post('/', (req, res) => {
   // const { token, userId } = req;
   const {   
-    taxIdNumber,
     name,
-    contactPerson,
     expiredAt,
-    isPublish, 
+    isPublish,
+    machineIds,
   } = req.body;
 
   const data = {
     // token,
     // userId,
-    taxIdNumber,
     name,
-    contactPerson,
     expiredAt,
     isPublish,
   };
@@ -107,11 +104,10 @@ app.post('/', (req, res) => {
   const schema = {
     type: 'object',
     properties: {
-      taxIdNumber: STRING_SCHEMA(),
       name: STRING_SCHEMA(),
-      contactPerson: STRING_SCHEMA(),
       expiredAt: TIMESTAMP_SCHEMA(),
-      isPublish: BOOLEAN_SCHEMA()
+      isPublish: BOOLEAN_SCHEMA(),
+      machineIds: MACHINE_IDS_SCHEMA(),
     },
     required: ['name']
   };
@@ -140,31 +136,27 @@ app.post('/', (req, res) => {
 app.put('/:organizationId', (req, res) => {
   const { organizationId } = req.params;
   const {   
-    taxIdNumber,
     name,
-    contactPerson,
     expiredAt,
-    isPublish, 
+    isPublish,
+    machineIds,
   } = req.body;
 
   const data = {
     // token,
     // userId,
     organizationId,
-    taxIdNumber,
     name,
-    contactPerson,
     expiredAt,
     isPublish,
+    machineIds,
   };
 
   const schema = {
     type: 'object',
     properties: {
       organizationId: UUID_SCHEMA(),
-      taxIdNumber: STRING_SCHEMA(),
       name: STRING_SCHEMA(),
-      contactPerson: STRING_SCHEMA(),
       expiredAt: TIMESTAMP_SCHEMA(),
       isPublish: BOOLEAN_SCHEMA()
     },
